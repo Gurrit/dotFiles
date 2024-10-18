@@ -1,0 +1,6 @@
+addalias() {
+    echo "alias $1=\"${@:2}\"" >> ~/.conf/custom-alias
+    source ~/.conf/custom-alias
+
+}
+

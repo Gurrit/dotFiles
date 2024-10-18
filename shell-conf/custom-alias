@@ -1,0 +1,13 @@
+alias s=sudo
+alias v=vim
+alias ainstall="sudo apt install"
+alias aupdate="sudo apt update"
+alias aupgrade="sudo apt update && sudo apt upgrade"
+alias c="clear"
+alias gc="git clone"
+alias dev="cd /home/gustav/pagero-dev"
+alias recipe="vim /home/gustav/.recipe"
+alias editzsh="vim /home/gustav/.zshrc"
+alias intellij="idea"
+alias redeploy="cd $HOME/pagero-dev/platformrecipe; sbt personal:deploy -y; cd -"
+alias hist="history"
