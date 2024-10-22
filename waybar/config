@@ -1,0 +1,100 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window", "sway/language", "keyboard-state"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "bluetooth", "network", "battery", "clock"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "sway/language": {
+        "format-en": "EN",
+        "format-se": "SE",
+	"min-length": 5,
+	"tooltip": false
+    },
+	// TODO FIX THIS
+    "keyboard-state": {
+        // "numlock": true,
+        "capslock": true,
+        "format": "HEJSAN ",
+        "format-icons": {
+            "locked": "AAA",
+            "unlocked": "BBB"
+        },
+    },
+// TODO Make this prettier
+    "bluetooth": {
+	"format": "BT: {status}",
+	"tooltip-format-enumerate-connected": "{device-alias}\t{device_address}"
+    },
+    "clock": {
+        "format": "⌚ {:%a %d %b %H:%M}",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["🔋"],
+        "format-charging": "{capacity}% ",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["🛜"],
+            "ethernet": ["🖧"],
+            "disconnected": ["🚫🛜"]
+        },
+        "on-click": "alactritty -e nmtui",
+    "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "🔇",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["🔈", "🔈", "🔈", "🔈"]
+        },
+        "scroll-step": 10,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["💻"],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "x",
+            "deactivated": "a"
+        },
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 20
+    }
+}
+

@@ -128,8 +128,7 @@ export EDITOR="$VISUAL"
 # stuff from .conf files
 source ~/.conf/alias
 source ~/.conf/custom-alias
-source ~/.conf/github
-source ~/.conf/pagero
+source ~/.conf/custom/*
 
 # Source syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
