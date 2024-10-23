@@ -3,9 +3,9 @@
     "position": "top",
     "height": 30,
 
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window", "sway/language", "keyboard-state"],
-    "modules-right": ["tray", "backlight", "pulseaudio", "bluetooth", "network", "battery", "clock"],
+    "modules-left": ["sway/window", "sway/mode"],
+    "modules-center": ["sway/workspaces", "keyboard-state"],
+    "modules-right": ["sway/language", "tray", "backlight", "pulseaudio", "bluetooth", "network", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -17,6 +17,7 @@
         "max-length": 80,
         "tooltip": false
     },
+// TODO This should be in css files instead
     "sway/language": {
         "format-en": "EN",
         "format-se": "SE",

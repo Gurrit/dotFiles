@@ -240,5 +240,5 @@ client.focused          #46387f #000000 #ffffff #2e9ef4   #46387f
 # Print if the shell is windows
 for_window [shell = "xwayland"] border normal title_format "[XWayland] %title"
 
-include @sysconfdir@/sway/config.d/*
+include /etc/sway/config.d/*
 

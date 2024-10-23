@@ -39,16 +39,20 @@ window#waybar.solo {
     background-color: rgba(140, 20, 230, 0.4);
     min-width: 20px;
     border-radius: 5px;
-    transition: width 2s
 }
 
 #workspaces button.urgent {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
-    margin:     0px 6px 0px 10px;
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #bluetooth, #language{
+    margin: 0 1px 0 1px;
+    padding-right: 7px;
+    padding-left: 7px;
     min-width:  25px;
+    border-left: 1px solid rgba(150, 30, 130, 0.5);
+    border-right: 1px solid rgba(150, 30, 130, 0.5);
+    background: rgba(50, 0, 50, 0.15);
 }
 
 #clock {
