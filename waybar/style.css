@@ -1,16 +1,16 @@
 * {
     border:        none;
-    border-radius: 0;
+    border-radius: 5px;
     font-family:   Sans;
     font-size:     15px;
     box-shadow:    none;
     text-shadow:   none;
-    transition-duration: 0s;
+    transition-duration: 0.2s;
 }
 
 window {
     color:      rgba(217, 216, 216, 1);
-    background: rgba(35, 31, 32, 0.00);
+    background: rgba(35, 31, 32, 1.00);
 }
 
 window#waybar.solo {
@@ -19,21 +19,27 @@ window#waybar.solo {
 }
 
 #workspaces {
-    margin: 0 5px;
+    margin: 1 5px;
 }
 
 #workspaces button {
-    padding:    0 5px;
+    padding:    0 15px;
     color:      rgba(217, 216, 216, 0.4);
+    border-bottom: 3px solid transparent;
 }
 
 #workspaces button.visible {
     color:      rgba(217, 216, 216, 1);
+    min-width: 15px;
 }
 
 #workspaces button.focused {
-    border-top: 3px solid rgba(217, 216, 216, 1);
-    border-bottom: 3px solid rgba(217, 216, 216, 0);
+    border-bottom: 1px solid rgba(130, 130, 130, 0.5);
+    border-right: 1px solid rgba(130, 130, 130, 0.5);
+    background-color: rgba(140, 20, 230, 0.4);
+    min-width: 20px;
+    border-radius: 5px;
+    transition: width 2s
 }
 
 #workspaces button.urgent {

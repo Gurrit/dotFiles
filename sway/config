@@ -39,7 +39,7 @@ set $lock swaylock -f -c 000000
  exec swayidle -w \
           timeout 300 '$lock' \
           timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep '$lock'
+          before-sleep 'playerctl pause; $lock'
 
 
 #
@@ -79,7 +79,7 @@ set $lock swaylock -f -c 000000
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-    
+ 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
@@ -221,13 +221,24 @@ exec_always ~/.config/waybar/waybar.sh
 exec_always swaync 
 
 output 'Samsung Electric Company LS49A950U H4ZT400217' pos 0 0 res 5120x1440
-output 'Samsung Display Corp. 0x4164 Unknown' pos 5120 0 res 3840x2400 scale 3
+output 'Samsung Display Corp. 0x4164 Unknown' pos 5120 0 res 3840x2400 scale 2.5
 
 # Swap CapsLock and Escape, Win + Space to toggle 
 input * {
    xkb_layout "us,se"
    xkb_options grp:win_space_toggle,caps:swapescape
 }
+
+# Border and Title Config
+default_border pixel 2
+
+gaps outer 2
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #46387f #000000 #ffffff #2e9ef4   #46387f
+
+# Print if the shell is windows
+for_window [shell = "xwayland"] border normal title_format "[XWayland] %title"
 
 include @sysconfdir@/sway/config.d/*
 
