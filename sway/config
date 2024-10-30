@@ -18,7 +18,8 @@ set $term alacritty
 # Your preferred application launcher
 set $menu exec wofi --prompt="search" --style="$HOME/.config/sway/wofi/style.css" --show=drun
 
-set $lock swaylock -f -c 000000
+set $wallpaper "$HOME/.config/sway/wallpaper"
+set $lock swaylock -f --image $wallpaper
 
 
 ### Output configuration
@@ -220,8 +221,9 @@ exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CUR
 exec_always ~/.config/waybar/waybar.sh
 exec_always swaync 
 
-output 'Samsung Electric Company LS49A950U H4ZT400217' pos 0 0 res 5120x1440
-output 'Samsung Display Corp. 0x4164 Unknown' pos 5120 0 res 3840x2400 scale 2.5
+output 'Samsung Electric Company LS49A950U H4ZT400217' pos 0 0 res 5120x1440 
+output 'Samsung Display Corp. 0x4164 Unknown' pos 5120 0 res 3840x2400 scale 2.5 
+output "*" bg $wallpaper fill #FFFFFF
 
 # Swap CapsLock and Escape, Win + Space to toggle 
 input * {

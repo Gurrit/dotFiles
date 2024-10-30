@@ -9,8 +9,9 @@
 }
 
 window {
-    color:      rgba(217, 216, 216, 1);
-    background: rgba(35, 31, 32, 1.00);
+    color:      rgba(100, 216, 216, 0.8);
+    background: rgba(35, 31, 32, 0.95);
+    border-bottom: 2px solid rgba(150, 0, 150, 0.4);
 }
 
 window#waybar.solo {
@@ -24,13 +25,18 @@ window#waybar.solo {
 
 #workspaces button {
     padding:    0 15px;
-    color:      rgba(217, 216, 216, 0.4);
+    color:      rgba(0, 216, 216, 0.4);
     border-bottom: 3px solid transparent;
 }
 
 #workspaces button.visible {
-    color:      rgba(217, 216, 216, 1);
+    color:      rgba(0, 216, 216, 0.5);
+    background-color: rgba(140, 20, 230, 0.4);
+    border-bottom: 1px solid rgba(130, 130, 130, 0.5);
+    border-right: 1px solid rgba(130, 130, 130, 0.5);
     min-width: 15px;
+    margin-bottom: 1px;
+    margin-top: 1px;
 }
 
 #workspaces button.focused {
@@ -39,6 +45,7 @@ window#waybar.solo {
     background-color: rgba(140, 20, 230, 0.4);
     min-width: 20px;
     border-radius: 5px;
+    color:      rgba(0, 216, 216, 0.6);
 }
 
 #workspaces button.urgent {
