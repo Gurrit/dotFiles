@@ -37,7 +37,6 @@
 // TODO Make this prettier
     "bluetooth": {
 	"format": "BT: {status}",
-	"tooltip-format-enumerate-connected": "{device-alias}\t{device_address}"
     },
     "clock": {
         "format": "⌚ {:%a %d %b %H:%M}",
