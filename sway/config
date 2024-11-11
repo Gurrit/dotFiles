@@ -38,11 +38,13 @@ set $lock swaylock -f --image $wallpaper --key-hl-color 772255 --ring-color DD44
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 300 '$lock' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          timeout 600 '$lock' \
+          timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'playerctl pause; $lock'
 
 
+# Store clipboard history
+exec wl-paste --watch cliphist store 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -235,6 +237,12 @@ input * {
    xkb_layout "us,se"
    xkb_options grp:win_space_toggle,caps:swapescape
 }
+
+input type:touchpad {
+  tap enabled
+  natural_scroll enabled
+}
+
 
 # Border and Title Config
 default_border pixel 2
