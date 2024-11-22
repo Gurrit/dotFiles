@@ -18,7 +18,8 @@ set $term alacritty
 # Your preferred application launcher
 set $menu exec wofi --prompt="search" --style="$HOME/.config/sway/wofi/style.css" --show=drun
 
-set $paste-menu exec cliphist list | wofi --prompt "paste-history" -dmenu --style="$HOME/.config/sway/wofi/style.css" | cliphist decode
+set $paste-menu exec cliphist list | wofi --prompt "paste-history" -dmenu --style="$HOME/.config/sway/wofi/style.css" | cliphist decode | wl-copy
+
 
 set $wallpaper "$HOME/.config/sway/wallpaper"
 set $lock swaylock -f --image $wallpaper --key-hl-color 772255 --ring-color DD44CC
