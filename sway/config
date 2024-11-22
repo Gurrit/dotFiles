@@ -18,6 +18,8 @@ set $term alacritty
 # Your preferred application launcher
 set $menu exec wofi --prompt="search" --style="$HOME/.config/sway/wofi/style.css" --show=drun
 
+set $paste-menu exec cliphist list | wofi --prompt "paste-history" -dmenu --style="$HOME/.config/sway/wofi/style.css" | cliphist decode
+
 set $wallpaper "$HOME/.config/sway/wallpaper"
 set $lock swaylock -f --image $wallpaper --key-hl-color 772255 --ring-color DD44CC
 
@@ -76,6 +78,7 @@ exec wl-paste --watch cliphist store
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+v exec $paste-menu
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
