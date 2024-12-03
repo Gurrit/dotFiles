@@ -34,19 +34,18 @@
             "unlocked": "BBB"
         },
     },
-// TODO Make this prettier
     "bluetooth": {
-	"format": "BT: {status}",
+	"format": ": {status}",
     },
     "clock": {
-        "format": "⌚ {:%a %d %b %H:%M}",
+        "format": "&#xf017; {:%a %d %b %H:%M}",
         "tooltip": false
     },
     "battery": {
         "format": "{icon} {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["🔋"],
-        "format-charging": "{capacity}% ",
+        "format-icons": [" ", ""],
+        "format-charging": " {capacity}%",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -59,20 +58,20 @@
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["🛜"],
+            "wifi": [""],
             "ethernet": ["🖧"],
-            "disconnected": ["🚫🛜"]
+            "disconnected": [""]
         },
         "on-click": "alactritty -e nmtui",
     "tooltip": false
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}% ",
         "format-alt-click": "click-right",
         "format-muted": "🔇",
         "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "default": ["🔈", "🔈", "🔈", "🔈"]
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", ""]
         },
         "scroll-step": 10,
         "on-click": "pavucontrol",
@@ -81,7 +80,7 @@
     "backlight": {
         "format": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["💻"],
+        "format-icons": [""],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
