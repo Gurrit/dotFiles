@@ -47,6 +47,7 @@ set $lock swaylock -f --image $wallpaper --key-hl-color 772255 --ring-color DD44
 
 
 # Store clipboard history
+exec cliphist wipe
 exec wl-paste --watch cliphist store 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off

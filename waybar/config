@@ -68,7 +68,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}% ",
         "format-alt-click": "click-right",
-        "format-muted": "🔇",
+        "format-muted": "",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
             "default": ["", "", ""]
