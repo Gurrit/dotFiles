@@ -220,7 +220,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec Screenshot
 
 # Exec waybar scripts that kills any running before starting a new 
 
@@ -237,10 +237,11 @@ pos 5120,0
 mode 1920x1080@60Hz
 }
 
-# Swap CapsLock and Escape, Win + Space to toggle 
+# Swap CapsLock and Escape, Win + Space to toggle language
 input * {
    xkb_layout "us,se"
    xkb_options grp:win_space_toggle,caps:swapescape
+   xkb_numlock enabled
 }
 
 input type:touchpad {
@@ -250,15 +251,22 @@ input type:touchpad {
 
 
 # Border and Title Config
-default_border pixel 2
 
+default_border pixel 2
+default_floating_border pixel 2
 gaps outer 2
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #46387f #000000 #ffffff #2e9ef4   #46387f
 
-# Print if the shell is windows
+
+# Print if the shell is running using XWayland
 for_window [shell = "xwayland"] border normal title_format "[XWayland] %title"
+# Pavu should always open in floating mode
+for_window [app_id = "pavucontrol"] floating enable, resize set 400 400, move position 70ppt 1ppt, border pixel 8  
+
+# fix workspaces to outputs
+workspace 1 output eDP-1
 
 include /etc/sway/config.d/*
 
