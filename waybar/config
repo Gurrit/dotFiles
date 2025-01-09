@@ -3,7 +3,7 @@
     "position": "top",
     "height": 30,
 
-    "modules-left": ["sway/window", "sway/mode"],
+    "modules-left": ["custom/power", "sway/window", "sway/mode"],
     "modules-center": ["sway/workspaces", "keyboard-state"],
     "modules-right": ["sway/language", "tray", "backlight", "pulseaudio", "bluetooth", "network", "battery", "clock"],
     "sway/mode": {
@@ -57,12 +57,16 @@
         "format": "{icon}",
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/network-menu.xml", 
+	"menu-actions": {
+		"vpn": "alacritty -e nmtui-connect Pagero-OpenVPN"
+   	},
         "format-icons": {
             "wifi": [""],
             "ethernet": ["🖧"],
             "disconnected": [""]
         },
-        "on-click": "alactritty -e nmtui",
     "tooltip": false
     },
     "pulseaudio": {
@@ -74,7 +78,7 @@
             "default": ["", "", ""]
         },
         "scroll-step": 10,
-        "on-click": "pavucontrol",
+        "on-click": "toggle pavucontrol",
         "tooltip": false
     },
     "backlight": {
@@ -94,6 +98,18 @@
     },
     "tray": {
         "icon-size": 20
-    }
+    },
+    "custom/power": {
+       	"format" : "⏻ ",
+       	"tooltip": false,
+       	"menu": "on-click",
+        "menu-file": "/home/gustav/.config/waybar/power_menu.xml",
+        "menu-actions": {
+        	"shutdown": "shutdown",
+                "reboot": "reboot",
+                "suspend": "systemctl suspend",
+                "hibernate": "systemctl hibernate"
+           },
+       }
 }
 

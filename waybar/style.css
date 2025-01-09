@@ -1,6 +1,6 @@
 * {
     border:        none;
-    border-radius: 5px;
+    border-radius: 1px;
     font-family:   Sans;
     font-size:     15px;
     box-shadow:    none;
@@ -60,7 +60,7 @@ window#waybar.solo {
     border-radius: 0
 }
 
-#battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #bluetooth, #language{
+#battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #bluetooth, #language {
     margin: 0 1px 0 1px;
     padding-right: 7px;
     padding-left: 7px;
@@ -68,6 +68,14 @@ window#waybar.solo {
     border-left: 1px solid rgba(150, 30, 130, 0.5);
     border-right: 1px solid rgba(150, 30, 130, 0.5);
     background: rgba(50, 0, 50, 0.15);
+}
+
+#custom-power {
+	padding: 3px 15px 0px 19px;
+	margin: 2px 12px 2px 4px;
+	border: 1px solid rgba(150, 30, 130, 0.5);
+	border-radius: 50px;
+	color: orange;
 }
 
 #clock {
