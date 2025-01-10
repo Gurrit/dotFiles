@@ -1,22 +1,21 @@
 * {
     border:        none;
-    border-radius: 1px;
+    border-radius: 0px;
     font-family:   Sans;
     font-size:     15px;
     box-shadow:    none;
     text-shadow:   none;
-    transition-duration: 0.2s;
 }
 
 window {
-    color:      rgba(100, 216, 216, 0.8);
-    background: rgba(35, 31, 32, 0.95);
-    border-bottom: 2px solid rgba(150, 0, 150, 0.4);
+    color:      rgba(181, 232, 224, 0.8);
+    background: rgba(22, 19, 32, 0.95);
+    border-bottom: 0px solid rgba(150, 0, 150, 0.4);
 }
 
 window#waybar.solo {
-    color:      rgba(217, 216, 216, 1);
-    background: rgba(35, 31, 32, 0.85);
+    color:      rgba(181, 232, 224, 0.8);
+    background: rgba(22, 19, 32, 0.95);
 }
 
 #workspaces {
@@ -25,33 +24,30 @@ window#waybar.solo {
 
 #workspaces button {
     padding:    0 15px;
-    color:      rgba(0, 216, 216, 0.4);
-    border-bottom: 3px solid transparent;
+    color:      rgba(181, 232, 224, 0.8);
+    transition: padding 0s, min-width 0.3s linear, border-radius 0.1s linear;
 }
 
 #workspaces button.visible {
-    color:      rgba(0, 216, 216, 0.5);
+    color:      rgba(181, 232, 224, 0.8);
     background-color: rgba(140, 20, 230, 0.4);
-    border-bottom: 1px solid rgba(130, 130, 130, 0.5);
-    border-right: 1px solid rgba(130, 130, 130, 0.5);
     min-width: 15px;
     margin-bottom: 1px;
     margin-top: 1px;
 }
 
 #workspaces button.focused {
-    border-bottom: 1px solid rgba(130, 130, 130, 0.5);
-    border-right: 1px solid rgba(130, 130, 130, 0.5);
-    background-color: rgba(140, 20, 230, 0.2);
-    min-width: 20px;
-    border-radius: 5px;
-    color:      rgba(0, 216, 216, 0.6);
+    border: 1px solid rgba(130, 130, 130, 0.2);
+    background-color: rgba(140, 20, 230, 0.1);
+    min-width: 25px;
+    border-radius: 15px;
+    color:      rgba(100, 200, 190, 0.8);
+    transition: min-width 0.2s linear, border-radius 0.1s linear;
 }
 
 #workspaces button.urgent {
     color:      rgba(238, 46, 36, 1);
 }
-
 
 #mode{
     margin-left: 10px;
@@ -61,38 +57,44 @@ window#waybar.solo {
 }
 
 #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #bluetooth, #language {
-    margin: 0 1px 0 1px;
-    padding-right: 7px;
-    padding-left: 7px;
+    padding-right: 9px;
+    padding-left: 9px;
     min-width:  25px;
-    border-left: 1px solid rgba(150, 30, 130, 0.5);
-    border-right: 1px solid rgba(150, 30, 130, 0.5);
     background: rgba(50, 0, 50, 0.15);
 }
 
+#battery {
+	background: rgba(150, 70, 150, 0.30);
+}
+
+#network {
+	background: rgba(100, 70, 20, 0.30);
+}
+
+#bluetooth {
+	background: rgba(10, 150, 250, 0.30);
+}
+
+#pulseaudio {
+	background: rgba(10, 150, 40, 0.30);
+}
+
+#language {
+	background: rgba(140, 30, 40, 0.30);
+}
+
 #custom-power {
-	padding: 3px 15px 0px 19px;
+	padding: 3px 5px 0px 9px;
 	margin: 2px 12px 2px 4px;
-	border: 1px solid rgba(150, 30, 130, 0.5);
+	border: 1px solid rgba(50, 30, 50, 0.8);
 	border-radius: 50px;
 	color: orange;
+	background: rgba(80, 40, 140, 0.15);
 }
 
 #clock {
     margin:     0px 16px 0px 10px;
     min-width:  140px;
-}
-
-#battery.warning {
-   color:       rgba(255, 210, 4, 1);
-}
-
-#battery.critical {
-    color:      rgba(238, 46, 36, 1);
-}
-
-#battery.charging {
-    color:      rgba(217, 216, 216, 1);
 }
 
 #custom-storage.warning {
@@ -103,3 +105,12 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
+menu {
+	border-radius: 15px;
+	border: solid 1px #555060;
+	background: #161320;
+	color: #B5E8E0;
+}
+menuitem {
+	border-radius: 15px;
+}
