@@ -10,7 +10,9 @@
 window {
     color:      rgba(181, 232, 224, 0.8);
     background: rgba(22, 19, 32, 0.95);
-    border-bottom: 0px solid rgba(150, 0, 150, 0.4);
+    border-radius: 15px;
+    border-left: 2px solid rgba(40, 20, 32, 0.95);
+    border-right: 2px solid rgba(40, 20, 32, 0.95);
 }
 
 window#waybar.solo {
@@ -25,7 +27,7 @@ window#waybar.solo {
 #workspaces button {
     padding:    0 15px;
     color:      rgba(181, 232, 224, 0.8);
-    transition: padding 0s, min-width 0.3s linear, border-radius 0.1s linear;
+    transition: background-color 0.1s linear, border-radius 0.1s linear;
 }
 
 #workspaces button.visible {
@@ -42,7 +44,7 @@ window#waybar.solo {
     min-width: 25px;
     border-radius: 15px;
     color:      rgba(100, 200, 190, 0.8);
-    transition: min-width 0.2s linear, border-radius 0.1s linear;
+    transition: min-width 0.2s linear, background-color 0.2s, border-radius 0.1s linear;
 }
 
 #workspaces button.urgent {
