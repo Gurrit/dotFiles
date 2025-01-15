@@ -87,7 +87,7 @@ window#waybar.solo {
 
 #custom-power {
 	padding: 3px 5px 0px 9px;
-	margin: 2px 12px 2px 4px;
+	margin: 4px 12px 4px 4px;
 	border: 1px solid rgba(50, 30, 50, 0.8);
 	border-radius: 50px;
 	color: orange;
