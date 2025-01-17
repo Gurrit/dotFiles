@@ -64,7 +64,7 @@
    	},
         "format-icons": {
             "wifi": [""],
-            "ethernet": ["🖧"],
+            "ethernet": [""],
             "disconnected": [""]
         },
     "tooltip": false
