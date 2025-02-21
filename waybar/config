@@ -39,16 +39,17 @@
     },
     "clock": {
         "format": "&#xf017; {:%a %d %b %H:%M}",
+	"timezone": "Europe/Stockholm",
         "tooltip": false
     },
     "battery": {
         "format": "{icon} {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": [" ", ""],
+        "format-icons": [" "],
         "format-charging": " {capacity}%",
         "interval": 30,
         "states": {
-            "warning": 25,
+           "warning": 25,
             "critical": 10
         },
         "tooltip": false
@@ -105,7 +106,7 @@
        	"menu": "on-click",
         "menu-file": "/home/gustav/.config/waybar/power_menu.xml",
         "menu-actions": {
-        	"shutdown": "shutdown",
+        	"shutdown": "shutdown 0",
                 "reboot": "reboot",
                 "suspend": "systemctl suspend",
                 "hibernate": "systemctl hibernate"
