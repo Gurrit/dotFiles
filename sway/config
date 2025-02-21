@@ -268,4 +268,7 @@ for_window [app_id = "pavucontrol"] floating enable, resize set 400 400, move po
 # fix workspaces to outputs
 workspace 1 output eDP-1
 
+# Move Workspace between Displays
+bindsym $mod+shift+p move workspace to output right
+
 include /etc/sway/config.d/*
