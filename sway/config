@@ -40,7 +40,7 @@ set $lock swaylock -f --image $wallpaper --key-hl-color 772255 --ring-color DD44
 #
 # Example configuration:
 #
- exec swayidle -w \
+exec swayidle -w \
           timeout 600 '$lock' \
           timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'playerctl pause; $lock'
@@ -224,18 +224,14 @@ bindsym $mod+r mode "resize"
 
 # Exec waybar scripts that kills any running before starting a new 
 
+bindsym $mod+p exec rofi-pass 
+
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=compositor_name
 exec_always ~/.config/waybar/waybar.sh
 exec_always swaync 
 
-output 'Samsung Electric Company LS49A950U H4ZT400217' pos 0 0 res 5120x1440 
-output 'Samsung Display Corp. 0x4164 Unknown' pos 5120 0 res 3840x2400 scale 2
+include ~/.config/sway/custom-output
 output "*" bg $wallpaper stretch #FFFFFF
-
-output HEADLESS-1 {
-pos 5120,0
-mode 1920x1080@60Hz
-}
 
 # Swap CapsLock and Escape, Win + Space to toggle language
 input * {
@@ -255,10 +251,10 @@ input type:touchpad {
 default_border pixel 2
 default_floating_border pixel 2
 gaps outer 2
+gaps inner 1
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #46387f #000000 #ffffff #2e9ef4   #46387f
-
 
 # Print if the shell is running using XWayland
 for_window [shell = "xwayland"] border normal title_format "[XWayland] %title"
