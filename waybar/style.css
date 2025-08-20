@@ -116,3 +116,7 @@ menu {
 menuitem {
 	border-radius: 15px;
 }
+#custom-media {
+    	background: rgba(0, 60, 32, 0.6);
+	padding: 0px 10px 0px 10px;
+}
