@@ -129,7 +129,9 @@ export EDITOR="$VISUAL"
 # stuff from .conf files
 source ~/.conf/alias
 source ~/.conf/custom-alias
-source ~/.conf/custom/*
+for file in ~/.conf/custom/*; do 
+	source $file 
+done
 
 # Source syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -146,5 +148,5 @@ source <(ng completion script)
 
 if command -v eza >/dev/null 2>&1 
 then
-	alias ls="eza --icons=always"
+	alias ls="eza"
 fi
